@@ -338,6 +338,12 @@ button {
   border-radius: 0;
 }
 
+snsbutton {
+  cursor        : pointer;    
+  padding       : 12px 12px; 
+}
+
+
 button:focus:not(:focus-visible) {
   outline: 0;
 }
