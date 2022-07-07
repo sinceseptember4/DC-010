@@ -302,7 +302,7 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe00PlZPTy-rMBytbSW-XDrGtZk8RSQgSaSGT0XpztTJUz9Pg/formResponse">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe00PlZPTy-rMBytbSW-XDrGtZk8RSQgSaSGT0XpztTJUz9Pg/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -602,6 +602,17 @@
                 </div>
             </div>
         </div>
+        <script>
+            let submitted = false;
+        
+            const page_transition = function () {
+                if(submitted){
+                    window.location = 'thanks.html';
+                }
+            }
+        </script>    
+        <iframe name="hidden_iframe" style="display:none;" onload="page_transition()"></iframe>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
