@@ -300,17 +300,20 @@
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="email"  name="entry.2005620554"  pattern=".+@.+\..+" required/>
+                                <input class="form-control" type="text" name="entry.2005620554"   required/>
+                                <label for="name">Name(お名前)</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="text"name="entry.1279815865"  required/>
+                                <input class="form-control" type="email" name="entry.1279815865" pattern=".+@.+\..+" required/>
+                                <label for="name">Mail(メールアドレス)</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="text"name="entry.1166974658"  required/>
+                                <input class="form-control" type="tel" name="entry.1166974658" pattern="[\d\-]*" required/>
+                                <label for="name">Phone Number(電話番号)</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <textarea class="form-control" type="text"name="entry.839337160" placeholder="Your Message *" data-sb-validations="required" rows="8" required></textarea>
+                            <textarea class="form-control" type="text"name="entry.839337160" placeholder="Your Message(ご連絡内容)" data-sb-validations="required" rows="8" required></textarea>
                         </div>
                         <div class="text-center">
                             <button  class="btn btn-primary btn-xl text-uppercase " type="submit">送信</button>
