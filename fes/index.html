@@ -13,9 +13,8 @@ var onloadCallback = function() {
 };
 //上記 'callback' で指定したコールバック関数の定義
 var myAlert = function(response) {
-  alert("チェックボックスがチェックされました！");
   let text = document.getElementById('outer').innerHTML;
-  document.getElementById('outer').innerHTML = '<h1>innerHTMLでHTMLを書き換えています</h1>';
+  document.getElementById('outer').innerHTML = '<div id="inner-success"><h1>おめでとうございます成功です。</h1></div>';
 };
 </script>
 </head>

@@ -12,3 +12,10 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
 }
+#inner-success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: aquamarine;
+}
