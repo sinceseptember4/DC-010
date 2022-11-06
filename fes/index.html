@@ -5,18 +5,17 @@
 <script>
 //onload callback function（ページをロードした際に実行される関数）
 var onloadCallback = function() {
-  //ウィジェットを表示するメソッド
+
   grecaptcha.render('recaptcha', { 
     'sitekey' : "6Le1QnQiAAAAAB6T2by3Z5LbFmzdzP_bwiSsnk9H",
-    'callback' : myAlert //コールバック関数名
+    'callback' : myAlert
   });
 };
-//上記 'callback' で指定したコールバック関数の定義
+//document.getElementById("body").style.backgroundColor = 'aquamarine';
 var myAlert = function(response) {
-  const box = document.querySelectorAll("#outer");
-  box.style.backgroundColor = 'aquamarine';
-  let text = document.getElementById('outer').innerHTML;
-  document.getElementById('outer').innerHTML = '<div id="inner-success"><h1>おめでとうございます成功です。</h1></div>';
+  document.getElementById('body').innerHTML = '<div id="outer-success"><div id="inner-success"><h1>おめでとうございます成功です。</h1></div></div>';
+  //document.getElementById("body").style.backgroundColor = 'aquamarine';
+
 };
 </script>
 </head>
