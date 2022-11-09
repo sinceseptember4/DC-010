@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Explicit render after an onload callback</title>
+<title>私はロボットではありません</title>
 <link href="style.css" rel="stylesheet" />
 <script>
 //onload callback function（ページをロードした際に実行される関数）
@@ -12,23 +12,22 @@ var onloadCallback = function() {
   });
 };
 var myAlert = function(response) {
-  alert("test");
-  //document.getElementById('#outer').innerHTML = '<div id="inner-success"><h1>おめでとうございます成功です。</h1></div>';
-  //document.getElementById("body").style.backgroundColor = 'aquamarine';
-
+  
+  document.getElementById('select').innerHTML = '<div id="outer-success"><div id="inner-success"><h1>おめでとうございます成功です。</h1><a href="explanation.html">次に進む</a></div></div>';
 };
 </script>
 </head>
 <body>
-  <div id="outer">
-  <form id="inner" method="post" action="?">
-    
-      <h1>試してみてください</h1>
-      <div id="recaptcha">
-      </div>
-    
-  </form>
-</div>
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script><!-- API の読み込み -->
+  <div id="select">
+    <div id="outer">
+      <form id="inner" method="post" action="?">
+        <h1>試してみてください</h1>
+          <div id="recaptcha">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
 </body>
 </html>

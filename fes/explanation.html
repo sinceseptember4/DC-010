@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>そもそもこれなあに</title>
+</head>
+<script>
+var onloadCallback = function() {
+
+grecaptcha.render('recaptcha', { 
+  'sitekey' : "6Le1QnQiAAAAAB6T2by3Z5LbFmzdzP_bwiSsnk9H",
+  'callback' : myAlert
+});
+};
+</script>
+<body>
+    <div id="outer">
+        <form id="inner" method="post" action="?">
+        
+            <div id="recaptcha">
+            </div>
+        </div>
+      </form>
+</body>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script>
+
+function location() {
+    window.location.href = '/fes/index.html'
+}
+
+setTimeout(location, 3000);
+</script>
+</html>
