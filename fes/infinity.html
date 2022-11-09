@@ -10,12 +10,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-
+<script>
+  function remind() {
+    location = '/fes/index.html'
+    }
+    setTimeout(remind, 30000);
+  </script>
 <body>
   <div id="root"></div>
   <script type="text/babel">
     const App = () => {
-      const widgetCount = 18;
+      const widgetCount = 30;
       const [verified, setVerified] = React.useState([]);
       React.useEffect(() => {
         const widgets = [...Array(widgetCount).keys()].map(n =>

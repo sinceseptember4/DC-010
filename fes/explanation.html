@@ -7,30 +7,35 @@
     <title>そもそもこれなあに</title>
 </head>
 <script>
-var onloadCallback = function() {
-
-grecaptcha.render('recaptcha', { 
-  'sitekey' : "6Le1QnQiAAAAAB6T2by3Z5LbFmzdzP_bwiSsnk9H",
-  'callback' : myAlert
-});
-};
+    //onload callback function（ページをロードした際に実行される関数）
+    var onloadCallback = function() {
+    
+      grecaptcha.render('recaptcha', { 
+        'sitekey' : "6Le1QnQiAAAAAB6T2by3Z5LbFmzdzP_bwiSsnk9H",
+        'callback' : myAlert
+      });
+    };
+    var myAlert = function(response) {
+      
+      document.getElementById('select').innerHTML = '<div id="outer-success"><div id="inner-success"><h1>おめでとうございます成功です。</h1><a href="explanation.html">次に進む</a></div></div>';
+    };
 </script>
 <body>
-    <div id="outer">
-        <form id="inner" method="post" action="?">
-        
-            <div id="recaptcha">
+    <div id="select">
+        <div id="outer">
+          <form id="inner" method="post" action="?">
+              <div id="recaptcha">
             </div>
+          </form>
         </div>
-      </form>
+      </div>
 </body>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script>
-
-function location() {
+      function remind() {
     window.location.href = '/fes/index.html'
 }
 
-setTimeout(location, 3000);
+setTimeout(remind, 30000);
 </script>
 </html>
