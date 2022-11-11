@@ -36,6 +36,9 @@ body {
 #inner-success h1 {
     color: white;
 }
+#inner-success h3 {
+    color: white;
+}
 #explanation-recaptcha {
     position: absolute;
     top: 50%;
