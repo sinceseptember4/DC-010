@@ -12,7 +12,7 @@ body {
 
 .child1 {
     position: absolute;
-    top: 20%;
+    top: 67%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
 }
